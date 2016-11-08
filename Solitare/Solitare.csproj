@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5A34CCD0-EA2C-4FC2-9A31-839E022A4E1E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Solitare</RootNamespace>
+    <AssemblyName>Solitare</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>sol.ico</ApplicationIcon>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>0B1901372C80100E685A172E5DE98044E161DBA3</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Solitare_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <StartupObject>Solitare.Program</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>ftp://www.uzitech.com/files/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.UziTech.com/files/</InstallUrl>
+    <UpdateUrl>http://www.UziTech.com/files/</UpdateUrl>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>Solitare++</ProductName>
+    <PublisherName>UziTech</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>16</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C4F.DevKit.Telephony, Version=1.0.0.0, Culture=neutral, PublicKeyToken=db6017b098a30de9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\C4F\C4F Developer Kit 2008\Controls\C4F.DevKit.Telephony.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2c.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2d.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2h.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2s.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3c.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3d.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3h.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3s.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4c.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4d.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4h.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4s.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5c.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5d.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5h.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5s.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6c.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6d.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6h.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6s.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7c.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7d.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7h.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7s.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8c.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8d.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8h.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8s.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9c.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9d.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9h.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9s.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10c.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10d.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10h.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10s.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ac.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ad.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ah.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\as.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jc.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jd.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jh.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\js.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kc.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kd.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kh.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ks.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qc.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qd.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qh.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qs.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\27.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\35.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\36.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\37.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\38.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\39.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\41.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\42.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\44.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\45.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\47.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\49.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\50.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\51.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clouds.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawPile.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawPileX.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawPileO.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foundation.bmp" />
+    <None Include="Solitare_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tableau.bmp" />
+    <Content Include="sol.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="C4F.DevKit.Telephony">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Interop.TAPI3Lib">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <FileAssociation Include=".Sol">
+      <Visible>False</Visible>
+      <Description>Solitare Save File</Description>
+      <Progid>4e4de777-7e35-4e08-9358-2129bd704b7e</Progid>
+      <DefaultIcon>sol.ico</DefaultIcon>
+    </FileAssociation>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
